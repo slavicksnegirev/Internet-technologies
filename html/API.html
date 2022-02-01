@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Жизнь слонов в дикой природе (внешний API)</title>
+    <link rel="stylesheet" href="../css/connectingCSS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+<body id="top">
+<header class="header">
+    <div class="wrapper">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../images/logo.png" alt="Home">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="../index.html" class="header__link">Статья</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="statistics.html" class="header__link">Статистика</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="notes.html" class="header__link">Заметки</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="form.html" class="header__link">Анкета</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="header__link">Внешний&nbspAPI</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-burger__header">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="wrapper">
+        <div class="form__wrapper">
+            <h1 class="heading">Внешний API</h1>
+            <div class="dataForRequest">
+                <form id="form" class="contact-form" method="post" name="contact-form"
+                      enctype="multipart/form-data">
+                    <label>
+                        <p class="head_input">Наименование компании:</p>
+                        <select id="company_name" class="_companyName _req">
+                            <option>Выберите компанию</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p class="head_input">Интервал графика:</p>
+                        <select id="interval" class="_interval _req">
+                            <option>Выберите интервал</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p class="head_input">Количество записей в ответе <span>(от 1 до 1700 записей)</span>:</p>
+                        <input class="_req _numbersOfRecords" type="number" id="numberOfRecords" value="500">
+                        <p class="span"></p>
+                    </label>
+                    <label>
+                        <p class="head_input">Начиная с даты:</p>
+                        <input class="_req _date" type="date" id="date" >
+                    </label>
+                    <label>
+                        <p class="head_input">Заканчивая датой (есть вероятность не дойти до конечной даты):</p>
+                        <input class="_req _dateFinish" type="date" id="dateFinish" >
+                    </label>
+                    <button type="submit" class="form__button api_btn">Получить данные</button>
+                    <p>* в случае, когда выбран маленький временной промежуток и большой интервал, допускается возможным отсутствие данных.</p>
+                    <br>
+                </form>
+                <div class="graph">
+                    <canvas id="myChart" width="500" height="400"></canvas>
+                </div>
+                <p class="end">.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+
+</script>
+<script src="../js/openingImages.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/getDataForAPI.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: black;
+    background-color: blanchedalmond;
+    height: 100%;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 30px;
+    margin: auto auto;
+}
+.site-container {
+    overflow: hidden;
+}

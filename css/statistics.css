@@ -1,0 +1,57 @@
+/*также используется в API.html*/
+table {
+    text-align: center;
+    border-collapse: separate;
+    font-size: 15px;
+    border-spacing: 5px;
+    background-color: #ababab;
+    border: 15px solid #ababab;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    justify-items: center;
+    width: 100%;
+}
+
+td img {
+    width: 20px;
+    height: 20px;
+}
+
+.collapsible {
+    cursor: pointer;
+    padding: 18px 30px;
+    border: none;
+    text-align: left;
+    outline: none;
+    border-radius: 15px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.collapsible:hover {
+    transition: 0.8s;
+    background-color: #ababab;
+}
+
+.collapsible:active {
+    width: 100%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    margin-bottom: 46px;
+}
+
+.graph {
+    border-collapse: separate;
+    border: 15px solid #ababab;
+    border-radius: 15px;
+    margin-bottom: 46px;
+}
+
+.end {
+    color: #DAD8D8;
+}

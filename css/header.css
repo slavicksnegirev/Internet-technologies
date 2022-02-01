@@ -1,0 +1,33 @@
+.header__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: burlywood;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+}
+
+.header__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px;
+    align-items: center;
+}
+
+.header__link {
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 20px;
+    color: black;
+    transition: 0.4s;
+}
+
+.header__link:hover, .header__link:focus, .header__link:active {
+    opacity: .60;
+    transition: 0.4s;
+}
+

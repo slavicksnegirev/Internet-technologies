@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Жизнь слонов в дикой природе (анкета)</title>
+    <link rel="stylesheet" href="../css/connectingCSS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap"
+          rel="stylesheet">
+</head>
+<body id="top">
+<header class="header">
+    <div class="wrapper">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../images/logo.png" alt="Home">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="../index.html" class="header__link">Статья</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="statistics.html" class="header__link">Статистика</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="notes.html" class="header__link">Заметки</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="form.html" class="header__link">Анкета</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="API.html" class="header__link">Внешний&nbspAPI</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-burger__header">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <div class="wrapper">
+        <div class="form__wrapper">
+            <h1 class="heading">Регистрация нового пользователя</h1>
+            <form id="form" class="contact-form" action="../php/creatingProfile.php" method="post" name="contact-form" enctype="multipart/form-data">
+                <div class="short__input">
+                    <label>
+                        <p>Фамилия:</p>
+                        <input type="text" placeholder="Введите фамилию" name="surname" minlength="1" maxlength="12" required>
+                    </label>
+                    <label>
+                        <p>Имя:</p>
+                        <input type="text" placeholder="Введите имя" name="name" minlength="1" maxlength="12" required>
+                    </label>
+                    <label>
+                        <p>Отчество <span>(необязательно)</span>:</p>
+                        <input type="text" placeholder="Введите отчество" name="patronymic" maxlength="12">
+                    </label>
+
+                    <label>
+                        <p>Email:</p>
+                        <input type="email" placeholder="example@mail.ru" name="email" required>
+                    </label>
+                    <label for="password">
+                        <p>Пароль:</p>
+                        <input type="password" id="password" name="password" minlength="8" maxlength="12" placeholder="Введите пароль" required>
+                    </label>
+                    <label for="secondpassword" id="passwordInput">
+                        <p>Повторите пароль:</p>
+                        <input type="password" name="secondpassword" id="secondpassword" minlength="8" maxlength="12" placeholder="Подтвердите пароль" required>
+                    </label>
+                    <label>
+                        <p>Роль пользователя:</p>
+                        <select name="role" id="#role" required>
+                            <option>Выберите роль</option>
+                            <option value="admin">Администратор</option>
+                            <option value="user">Пользователь</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p>Репутация пользователя:</p>
+                        <input type="number" name="reputation" placeholder="от 1 до 10" min="1" max="10" required>
+                    </label>
+                    <label>
+                        <p>Дата регистрации:</p>
+                        <input type="date" name="date" required>
+                    </label>
+                </div>
+                <hr>
+                <label class="choice__img">
+                    <p>Выберите аватар <span>(до 1 Мб, *.png, *.jpeg)</span>:</p>
+                    <input type="file" name="img" placeholder="До 1Мб" accept="image/jpeg, image/png">
+                </label>
+                <label>
+                    <p>О себе <span>(необязательно)</span>:</p>
+                    <textarea name="about" id="about" placeholder="Расскажите о себе..."></textarea>
+                </label>
+                <hr>
+                <button type="button" onclick="validatePassword()" class="form__button">Отправить</button>
+                <button type="reset" class="form__button2">Очистить форму</button>
+            </form>
+        </div>
+    </div>
+</main>
+<script src="../js/openingImages.js"></script>
+<script src="../js/validPassword.js"></script>
+</body>
+</html>
